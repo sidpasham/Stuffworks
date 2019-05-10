@@ -1,0 +1,26 @@
+﻿@using StuffWorks.Code
+@if (Request.IsAuthenticated && HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                @*@{ UserDetails userdetails = (UserDetails)Session["UserData"]; }
+                <a>@userdetails.userfullname</a>*@
+                afshjafk
+                <ul class="dropdown-menu mega-dropdown-menu" style="background-color:#008b8b; font-family:Arial, Helvetica, sans-serif ">
+                    <li><a href="#" onclick="location.href='@Url.Action("Index","ManageUser")'">Dashboard</a></li>
+                    <li><a href="#" onclick="location.href='@Url.Action("ManageUserAccount","ManageUser")'">Manage Account</a></li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                </ul>
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" onclick="location.href='@Url.Action("Index","Account")'">Login/Register</a></li>
+    </ul>
+}

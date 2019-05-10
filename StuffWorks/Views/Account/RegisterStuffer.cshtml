@@ -1,0 +1,94 @@
+﻿@model StuffWorks.Models.RegisterStuffer
+
+@{
+    ViewBag.Title = "RegisterStuffer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-login">
+                <div class="panelHeading">
+                    <div class="row">
+                        <div class="col-xs-12" style="text-align:center">
+                            <h4 style="color:#008B8B"><b>Register Stuffer</b></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form id="register-form" action="@Url.Action("RegisterStuffer","Account")" method="post" role="form">
+                                <div class="form-group">
+                                    @*@Html.TextBox("Username","", new { @class= "form-control", @id="name",@placeholder="Username" })*@
+                                    @Html.TextBoxFor(m => m.FullName, new { @class = "form-control", @id = "fullName", @placeholder = "Fullname" })
+                                    @Html.ValidationMessageFor(m => m.FullName, string.Empty, new { @class = "validationText" })
+                                    @*<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">*@
+                                </div>
+                                <div class="form-group">
+                                    @*<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">*@
+                                    @Html.TextBoxFor(m => m.EmailID, new { @class = "form-control", @id = "email", @placeholder = "Email" })
+                                    @Html.ValidationMessageFor(m => m.EmailID, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @*<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">*@
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @id = "password", @placeholder = "Password" })
+                                    @Html.ValidationMessageFor(m => m.Password, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @*<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">*@
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @id = "cfmPassword", @placeholder = "Confirm Password" })
+                                    @Html.ValidationMessageFor(m => m.ConfirmPassword, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @id = "phone", @placeholder = "Phone Number" })
+                                    @Html.ValidationMessageFor(m => m.Phone, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Address1, new { @class = "form-control", @id = "address1", @placeholder = "Address1" })
+                                    @Html.ValidationMessageFor(m => m.Address1, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Address2, new { @class = "form-control", @id = "address2", @placeholder = "Address2" })
+                                    @Html.ValidationMessageFor(m => m.Address2, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.City, new { @class = "form-control", @id = "city", @placeholder = "City" })
+                                    @Html.ValidationMessageFor(m => m.City, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.State, new { @class = "form-control", @id = "state", @placeholder = "State" })
+                                    @Html.ValidationMessageFor(m => m.State, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control", @id = "ZipCode", @placeholder = "ZipCode" })
+                                    @Html.ValidationMessageFor(m => m.ZipCode, string.Empty, new { @class = "validationText" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.Service, Model.Services, "Select Service", new { @class = "form-control", @id = "service" })
+                                    @*@Html.ValidationMessageFor(m => m.Services, string.Empty, new { @class = "validationText" })*@
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now as Stuffer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

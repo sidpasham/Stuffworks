@@ -1,0 +1,197 @@
+﻿@model StuffWorks.Models.Admin
+
+@{
+    ViewBag.Title = "AdminView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <script>
+        function showusertable() {
+            var x = document.getElementById('viewusertable');
+            var y = document.getElementById('viewstuffertable');
+            var z = document.getElementById('viewservicetable');
+            x.style.display = 'block';
+            y.style.display = 'none';
+            z.style.display = 'none';
+            //if (x.style.display === 'block') {
+            //    x.style.display = 'none';
+            //}
+            //else {
+            //    x.style.display = 'block';
+            //}
+        }
+        function showstuffertable() {
+            var x = document.getElementById('viewusertable');
+            var y = document.getElementById('viewstuffertable');
+            var z = document.getElementById('viewservicetable');
+            x.style.display = 'none';
+            y.style.display = 'block';
+            z.style.display = 'none';
+            //if (x.style.display === 'block') {
+            //    x.style.display = 'none';
+            //}
+            //else {
+            //    x.style.display = 'block';
+            //}
+        }
+        function showservicetable() {
+            var x = document.getElementById('viewusertable');
+            var y = document.getElementById('viewstuffertable');
+            var z = document.getElementById('viewservicetable');
+            x.style.display = 'none';
+            y.style.display = 'none';
+            z.style.display = 'block';
+            //if (x.style.display === 'block') {
+            //    x.style.display = 'none';
+            //}
+            //else {
+            //    x.style.display = 'block';
+            //}
+        }
+    </script>
+}
+<br />
+<br />
+
+<div class="container">
+    <h2 style="text-align:center">Welcome Admin!</h2>
+    <div class="row">
+        <div class="col-md-4" align="right">
+            <button type="button" class="btn" style="height:100px; width:220px" onclick="showusertable()"><h3>Get Users</h3></button>
+        </div>
+        <div class="col-md-4" align="center">
+
+            <button type="button" class="btn" style="height:100px; width:220px" onclick="showstuffertable()"><h3>Get Stuffers</h3></button>
+        </div>
+        <div class="col-md-4" align="left">
+            <button type="button" class="btn" style="height:100px; width:220px" onclick="showservicetable()"><h3>Get Services</h3></button>
+        </div>
+    </div>
+</div>
+<br />
+<div id="viewusertable" style="display:none; font-size:12px">
+    <table class="table table-bordered" style="text-align:center">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn col in Model.dtusers.Columns)
+            {
+                    <th style="text-align:center">@col.Caption</th>
+                }
+                <th colspan="2" style="text-align:center">
+                    Manage User
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in Model.dtusers.Rows)
+            {
+                <tr>
+                    @foreach (var cell in row.ItemArray)
+                {
+                        <td>@cell.ToString()</td>
+
+                    }
+                    <td>
+                        <button type="button" class="btn" style="height:30px; width:120px; font-size:12px"><p>Delete</p></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn" style="height:30px; width:120px; font-size:12px" data-toggle="modal" data-target="#ViewUpdateUser"><p>View/Update</p></button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<div id="viewstuffertable" style="display:none; font-size:12px">
+    <table class="table table-bordered" style="text-align:center">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn col in Model.dtstuffers.Columns)
+            {
+                    <th style="text-align:center">@col.Caption</th>
+                }
+                <th colspan="2" style="text-align:center">
+                    Manage Stuffer
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in Model.dtstuffers.Rows)
+            {
+                <tr>
+                    @foreach (var cell in row.ItemArray)
+                {
+                        <td>@cell.ToString()</td>
+
+                    }
+                    <td>
+                        <button type="button" class="btn" style="height:30px; width:120px; font-size:12px" onclick="showservicetable()"><p>Delete</p></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn" style="height:30px; width:120px; font-size:12px" onclick="showservicetable()"><p>View/Update</p></button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<div id="viewservicetable" style="display:none; font-size:12px">
+    <button type="button" class="btn" style="height:30px; width:150px" onclick="showservicetable()"><p>Create Service</p></button>
+    <table class="table table-bordered" style="text-align:center">
+        <thead>
+            <tr>
+                @foreach (System.Data.DataColumn col in Model.dtservices.Columns)
+            {
+                    <th style="text-align:center">@col.Caption</th>
+                }
+                <th colspan="2" style="text-align:center">
+                    Manage Service
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (System.Data.DataRow row in Model.dtservices.Rows)
+            {
+                <tr>
+                    @foreach (var cell in row.ItemArray)
+                {
+                        <td>@cell.ToString()</td>
+
+                    }
+                    <td>
+                        <button type="button" class="btn" style="height:30px; width:120px; font-size:12px" onclick="showservicetable()"><p>Delete</p></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn" style="height:30px; width:120px; font-size:12px" onclick="showservicetable()"><p>View/Update</p></button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="ViewUpdateUser" role="dialog">
+    <div class="modal-dialog">
+        <br />
+        <br />
+        <br />
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="text-align:center"><strong>View/Update User</strong></h4>
+            </div>
+            <div class="modal-body">
+                @{
+                    Html.RenderPartial("UpdateUserView", new StuffWorks.Models.ManageUserDetails());
+                }
+            </div>
+            @*<div class="modal-footer">
+              </div>*@
+        </div>
+    </div>
+</div>

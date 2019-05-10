@@ -1,0 +1,5 @@
+E:\StuffWorks_Code\StuffWorks\StuffWorks_Database\bin\Debug\StuffWorks_Database.dacpac
+E:\StuffWorks_Code\StuffWorks\StuffWorks_Database\bin\Debug\StuffWorks_Database.dll
+E:\StuffWorks_Code\StuffWorks\StuffWorks_Database\bin\Debug\StuffWorks_Database.pdb
+E:\StuffWorks_Code\StuffWorks\StuffWorks_Database\obj\Debug\StuffWorks_Database.dll
+E:\StuffWorks_Code\StuffWorks\StuffWorks_Database\obj\Debug\StuffWorks_Database.pdb

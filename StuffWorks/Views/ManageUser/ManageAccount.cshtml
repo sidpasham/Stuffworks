@@ -1,0 +1,76 @@
+﻿@model StuffWorks.Models.ManageUserDetails
+    <br />
+@section styles{
+    <script>
+        function hideorshowpassworddiv() {
+            var x = document.getElementById('changepassworddiv');
+            if (x.style.display === 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+ </script>
+}
+<form id="loginform" action="@Url.Action("ManageUserAccount","ManageUser")" method="post" role="form" style="display: block;">
+    <div style="text-align:center">
+        <h3>Manage User Account</h3>
+    </div>
+    <br />
+    <div class="row" style="text-align:center">
+        <div class="col-sm-6 col-sm-offset-3">
+            <input type="button" name="ChangePassword" id="ChangePassword-submit" onclick="hideorshowpassworddiv()" tabindex="4" class="form-control btn btn-register"  value="Do you Want to Change Password? Click Here">
+        </div>
+    </div>
+    <br />
+    <div class="row" id="changepassworddiv" align="center" style="display:none">
+        <div class="form-group">
+            @Html.PasswordFor(m => m.currentpassword, new { @class = "form-control", @id = "currentpassword", @placeholder = "Current Password", @style = "width:400px" })
+        </div>
+        <div class="form-group">
+            @Html.PasswordFor(m => m.NewPassword, new { @class = "form-control", @id = "newpassword", @placeholder = "New Password", @style = "width:400px" })
+        </div>
+        <div class="form-group">
+            @Html.PasswordFor(m => m.ConfirmNewPassword, new { @class = "form-control", @id = "confirmnewpassword", @placeholder = "Confirm New Password", @style = "width:400px" })
+        </div>
+    </div>
+    <br />
+    <div class="row" style="text-align:center">
+        <div class="col-sm-6 col-sm-offset-3">
+            <input type="button" name="Changeaddress" id="Changeaddress-submit" tabindex="4" class="form-control btn btn-register" value="Do you Want to Change Address?">
+        </div>
+    </div>
+    <br />
+    <div class="row" id="changeaddressdiv" align="center">
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.useremail, new { @class = "form-control", @id = "useremail", @placeholder = "Email ID", @style = "width:400px" })
+            @Html.ValidationMessageFor(m => m.useremail, string.Empty, new { @class = "validationText" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.Address1, new { @class = "form-control", @id = "address1", @placeholder = "Address 1", @style = "width:400px" })
+            @Html.ValidationMessageFor(m => m.Address1, string.Empty, new { @class = "validationText" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.Address2, new { @class = "form-control", @id = "address2", @placeholder = "Address 2", @style = "width:400px" })
+            @Html.ValidationMessageFor(m => m.Address2, string.Empty, new { @class = "validationText" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control", @id = "city", @placeholder = "City", @style = "width:400px" })
+            @Html.ValidationMessageFor(m => m.City, string.Empty, new { @class = "validationText" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.State, new { @class = "form-control", @id = "state", @placeholder = "State", @style = "width:400px" })
+            @Html.ValidationMessageFor(m => m.State, string.Empty, new { @class = "validationText" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(m => m.Pincode, new { @class = "form-control", @id = "pincode", @placeholder = "Pincode", @style = "width:400px" })
+            @Html.ValidationMessageFor(m => m.Pincode, string.Empty, new { @class = "validationText" })
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <input type="submit" name="manageuser-submit" id="manageuser-submit" onclick="location.href='@Url.Action("ManageUserAccount","ManageUser")'" tabindex="4" class="form-control btn btn-register" value="Submit">
+        </div>
+    </div>
+</form>

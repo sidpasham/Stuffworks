@@ -1,0 +1,8 @@
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\bin\Debug\StuffWorks_DAL.dll
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\bin\Debug\StuffWorks_DAL.pdb
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\obj\Debug\StuffWorks_DAL.csprojResolveAssemblyReference.cache
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\obj\Debug\StuffWorks_DAL.dll
+E:\StuffWorks_Code\StuffWorks\StuffWorks_DAL\obj\Debug\StuffWorks_DAL.pdb

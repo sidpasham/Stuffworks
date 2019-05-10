@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffWorks", "StuffWorks\StuffWorks.csproj", "{A91BCBA7-B14A-45B2-8D78-627C66514165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffWorks_DAL", "StuffWorks_DAL\StuffWorks_DAL.csproj", "{E3FEA472-F28A-45E9-96B1-AFA03C0C0426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffWorks_BAL", "StuffWorks_BAL\StuffWorks_BAL.csproj", "{B54964C7-66BD-4321-BAA8-B269F1B68763}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StuffWorks_Database", "StuffWorks_Database\StuffWorks_Database.sqlproj", "{AF70D758-F2A5-415B-9295-A07C9774FB01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A91BCBA7-B14A-45B2-8D78-627C66514165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91BCBA7-B14A-45B2-8D78-627C66514165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91BCBA7-B14A-45B2-8D78-627C66514165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91BCBA7-B14A-45B2-8D78-627C66514165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3FEA472-F28A-45E9-96B1-AFA03C0C0426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FEA472-F28A-45E9-96B1-AFA03C0C0426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FEA472-F28A-45E9-96B1-AFA03C0C0426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3FEA472-F28A-45E9-96B1-AFA03C0C0426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54964C7-66BD-4321-BAA8-B269F1B68763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54964C7-66BD-4321-BAA8-B269F1B68763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54964C7-66BD-4321-BAA8-B269F1B68763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54964C7-66BD-4321-BAA8-B269F1B68763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF70D758-F2A5-415B-9295-A07C9774FB01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF70D758-F2A5-415B-9295-A07C9774FB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF70D758-F2A5-415B-9295-A07C9774FB01}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AF70D758-F2A5-415B-9295-A07C9774FB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF70D758-F2A5-415B-9295-A07C9774FB01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF70D758-F2A5-415B-9295-A07C9774FB01}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mkothapalli.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StuffWorks\\StuffWorks.csproj
+		SccProjectName1 = StuffWorks
+		SccLocalPath1 = StuffWorks
+		SccProjectUniqueName2 = StuffWorks_DAL\\StuffWorks_DAL.csproj
+		SccProjectName2 = StuffWorks_DAL
+		SccLocalPath2 = StuffWorks_DAL
+		SccProjectUniqueName3 = StuffWorks_BAL\\StuffWorks_BAL.csproj
+		SccProjectName3 = StuffWorks_BAL
+		SccLocalPath3 = StuffWorks_BAL
+		SccProjectUniqueName4 = StuffWorks_Database\\StuffWorks_Database.sqlproj
+		SccProjectName4 = StuffWorks_Database
+		SccLocalPath4 = StuffWorks_Database
+	EndGlobalSection
+EndGlobal
